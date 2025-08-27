@@ -3,4 +3,4 @@ _min_copier_version: "9.0.0"
 project_name:
   type: str
   help: What is your FastAPI project name?
-  default: "{{ (cwd | basename) }}"
+  default: "{{ (dst_path | basename) }}"
