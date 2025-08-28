@@ -39,3 +39,4 @@ _exclude:
   - ".DS_Store"
   - ".svn"
   - "extensions.py"
+  - README.md
