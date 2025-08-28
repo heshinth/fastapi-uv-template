@@ -28,3 +28,14 @@ author_email:
   type: str
   help: Your email
   default: "{{ 'heshinth@gmail.com' | git_user_email }}"
+
+_exclude:
+  - "copier.yaml"
+  - "copier.yml"
+  - "~*"
+  - "*.py[co]"
+  - "__pycache__"
+  - ".git"
+  - ".DS_Store"
+  - ".svn"
+  - "extensions.py"

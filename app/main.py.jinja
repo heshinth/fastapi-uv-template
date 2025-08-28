@@ -1,0 +1,16 @@
+from fastapi import FastAPI
+from api.routes import router
+
+app = FastAPI(
+    title="{{project_name}}",
+    description="{{project_description}}",
+    version="0.1.0",
+)
+
+
+@app.get("/")
+def read_root():
+    return {"Project": "{{project_name}}", "description": "{{project_description}}"}
+
+
+app.include_router(router)

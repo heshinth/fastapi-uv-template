@@ -7,4 +7,8 @@ authors = [
     { name = "{{author_name}}", email = "{{author_email}}" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi[standard]<1.0.0,>=0.116.1",
+    "httpx<1.0.0,>=0.28.1",
+    "load-dotenv<1.0.0,>=0.1.0"
+]
