@@ -1,5 +1,6 @@
 _min_copier_version: "9.0.0"
 _jinja_extensions:
+  - copier_template_extensions.TemplateExtensionLoader
   - extensions.py:GitExtension
   - extensions.py:SlugifyExtension
 
