@@ -1,7 +1,4 @@
 _min_copier_version: "9.0.0"
-_jinja_extensions:
-  - extensions.py:GitExtension
-  - extensions.py:SlugifyExtension
 
 project_name:
   type: str
@@ -21,9 +18,9 @@ project_description:
 author_name:
   type: str
   help: Your full name
-  default: "{{ 'Heshinth P' | git_user_name }}"
+  default: "{{ git_user_name }}"
 
 author_email:
   type: str
   help: Your email
-  default: "{{ 'heshinth@gmail.com' | git_user_email }}"
+  default: "{{ git_user_email }}"
