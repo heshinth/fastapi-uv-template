@@ -40,19 +40,19 @@ pipx inject copier copier-templates-extensions
 To generate a project, run one of the following commands:
 
 ```sh
-copier copy --trust "https://github.com/pawamoy/copier-uv.git" /path/to/your/new/project
+copier copy --trust "https://github.com/heshinth/fastapi-uv-template" /path/to/your/new/project
 ```
 
 Or with a shorter command:
 
 ```sh
-copier copy --trust "gh:pawamoy/copier-uv" /path/to/your/new/project
+copier copy --trust "gh:heshinth/fastapi-uv-template" /path/to/your/new/project
 ```
 
 You can even generate a project without installing Copier, using uv:
 
 ```sh
-uvx --with copier-templates-extensions copier copy --trust "gh:pawamoy/copier-uv" /path/to/your/new/project
+uvx --with copier-templates-extensions copier copy --trust "gh:heshinth/fastapi-uv-template" /path/to/your/new/project
 ```
 
 Replace `/path/to/your/new/project` with the desired path for your project.
