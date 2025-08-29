@@ -40,3 +40,4 @@ _exclude:
   - ".svn"
   - "extensions.py"
   - README.md
+  - LICENSE
