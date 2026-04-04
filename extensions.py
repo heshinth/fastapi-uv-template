@@ -6,7 +6,7 @@ import unicodedata
 import sys
 
 
-from jinja2.ext import Extension
+from jinja2.ext import Extension # type: ignore[import-untyped]
 
 
 def git_user_name(default: str) -> str:
