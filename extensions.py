@@ -6,7 +6,7 @@ import unicodedata
 import sys
 
 
-from jinja2.ext import Extension # type: ignore[import-untyped]
+from jinja2.ext import Extension  # type: ignore[import-untyped]
 
 
 def git_user_name(default: str) -> str:
@@ -16,11 +16,17 @@ def git_user_name(default: str) -> str:
 def git_user_email(default: str) -> str:
     return subprocess.getoutput("git config user.email").strip() or default
 
-def python_version() -> str:
+
+def python_version(_value: str = "") -> str:
     return f"{sys.version_info.major}.{sys.version_info.minor}"
 
+
 def slugify(value, separator="-"):
-    value = unicodedata.normalize("NFKD", str(value)).encode("ascii", "ignore").decode("ascii")
+    value = (
+        unicodedata.normalize("NFKD", str(value))
+        .encode("ascii", "ignore")
+        .decode("ascii")
+    )
     value = re.sub(r"[^\w\s-]", "", value.lower())
     return re.sub(r"[-_\s]+", separator, value).strip("-_")
 
@@ -37,7 +43,8 @@ class SlugifyExtension(Extension):
         super().__init__(environment)
         environment.filters["slugify"] = slugify
 
+
 class PythonExtension(Extension):
     def __init__(self, environment):
         super().__init__(environment)
-        environment.globals["python_version"] = python_version
+        environment.filters["python_version"] = python_version

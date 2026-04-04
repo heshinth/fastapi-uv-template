@@ -3,6 +3,7 @@ _jinja_extensions:
   - copier_template_extensions.TemplateExtensionLoader
   - extensions.py:GitExtension
   - extensions.py:SlugifyExtension
+  - extensions.py:PythonExtension
 
 project_name:
   type: str
@@ -22,7 +23,7 @@ project_description:
 python_version:
   type: str
   help: Python version to use (e.g. 3.12)
-  default: "{{ python_version }}"
+  default: "{{ '' | python_version }}"
 
 author_name:
   type: str
