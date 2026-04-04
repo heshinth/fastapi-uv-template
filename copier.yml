@@ -19,6 +19,11 @@ project_description:
   help: Your project description
   default: "A FastAPI project - {{project_name}}"
 
+python_version:
+  type: str
+  help: Python version to use (e.g. 3.12)
+  default: "{{ python_version }}"
+
 author_name:
   type: str
   help: Your full name
